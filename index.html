@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Task</title>
+</head>
+<body>
+    <script>
+        console.log("it works");
+        console.log("yes".concat(12))
+        function DivisionBasedReplacer(Input_Number){
+            let arrayys=[];
+            for(let i=1;i<=Input_Number; i++){
+                ky="";
+                addHyphen=false;
+                if(i%2 === 0){
+                    ky = ky.concat("yu");
+                    addHyphen = true;
+                }
+                if(i%3 == 0){
+                    if(addHyphen){
+                        ky = ky.concat("-gi");
+                    }else{
+                        ky = ky.concat("gi");
+                        addHyphen = true;
+                    }//end if                    
+                }//end if
+                if(i%5 == 0){
+                    if(addHyphen){
+                        ky = ky.concat("-oh");
+                    }else{
+                        ky = ky.concat("oh");
+                        addHyphen = true;
+                    }//end if                    
+                }//end if
+                if(!addHyphen){
+                    ky=i;
+                }//end if     
+                arrayys[i-1]=ky
+            }//for(let 1=0;)
+
+            return arrayys;
+        }//function DivisionBasedReplacer(Input_Number)
+        console.log(DivisionBasedReplacer(100));
+        console.log(DivisionBasedReplacer(1000));
+    </script>
+</body>
+</html>
